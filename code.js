@@ -12,3 +12,10 @@ function sayHello(name) {
     }
     return "Hello, " + name + "!";
 }
+
+function isFive(num) {
+    if (num == 5){
+        return true;
+    }
+    return false;
+}

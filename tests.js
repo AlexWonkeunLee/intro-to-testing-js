@@ -47,5 +47,29 @@ describe('sayHello', function(){
     });
     it('it should return Hello, World! when given null', function(){
         expect(sayHello(null)).toBe("Hello, Number!");
-    })
+    });
+});
+
+describe('isFive', function(){
+    it('it should be a defined function', function(){
+        expect(typeof isFive).toBe('function');
+    });
+    it('it should return a boolean', function(){
+        expect(typeof isFive()).toBe('boolean');
+    });
+    it('it should return true if given 5', function(){
+        expect(isFive(5)).toBe(true);
+    });
+    it('it should return false if given 4', function(){
+        expect(isFive(4)).toBe(false);
+    });
+    it('it should return false if given "abc"', function(){
+        expect(isFive("abc")).toBe(false);
+    });
+    it('it should return true if given "5"', function(){
+        expect(isFive("5")).toBe(true);
+    });
+    it('it should return false if given false', function(){
+        expect(isFive(false)).toBe(false);
+    });
 });
