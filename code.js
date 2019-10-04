@@ -19,3 +19,10 @@ function isFive(num) {
     }
     return false;
 }
+
+function isEven(num){
+    if (typeof(num) == "boolean"){
+        return false;
+    }
+    else return num % 2 === 0;
+}

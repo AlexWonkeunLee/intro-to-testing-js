@@ -45,7 +45,7 @@ describe('sayHello', function(){
     it('it should return Hello, Number! when given "5"', function(){
         expect(sayHello("5")).toBe("Hello, Number!");
     });
-    it('it should return Hello, World! when given null', function(){
+    it('it should return Hello, Number! when given null', function(){
         expect(sayHello(null)).toBe("Hello, Number!");
     });
 });
@@ -71,5 +71,41 @@ describe('isFive', function(){
     });
     it('it should return false if given false', function(){
         expect(isFive(false)).toBe(false);
+    });
+});
+
+describe('isEven', function(){
+    it('it should be a defined function', function(){
+        expect(typeof isEven).toBe('function');
+    });
+    it('it should return a boolean', function(){
+        expect(typeof isEven()).toBe('boolean');
+    });
+    it('it should return true when given 2', function(){
+        expect(isEven(2)).toBe(true);
+    });
+    it('it should return true when given -4', function(){
+        expect(isEven(-4)).toBe(true);
+    });
+    it('it should return false when given 3', function(){
+        expect(isEven(3)).toBe(false);
+    });
+    it('it should return false when given "banana"', function(){
+        expect(isEven("banana")).toBe(false);
+    });
+    it('it should return true when given "8"', function(){
+        expect(isEven("8")).toBe(true);
+    });
+    it('it should return false when given Infinity', function(){
+        expect(isEven(Infinity)).toBe(false);
+    });
+    it('it should return false when given boolean value', function(){
+        expect(isEven(true)).toBe(false);
+    });
+    it('it should return false when given boolean value', function(){
+        expect(isEven(false)).toBe(false);
+    });
+    it('it should return false when given nothing', function(){
+        expect(isEven()).toBe(false);
     });
 });
