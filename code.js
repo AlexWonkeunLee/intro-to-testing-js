@@ -26,3 +26,16 @@ function isEven(num){
     }
     else return num % 2 === 0;
 }
+
+function isVowel(letter){
+    if(typeof(letter) != "string"){
+        return false;
+    }
+    letter = letter.toLowerCase();
+    if(letter == "a" || letter == "e" || letter == "i" || letter == "o" || letter == "u"){
+        return true;
+    }
+    else{
+        return false
+    }
+}

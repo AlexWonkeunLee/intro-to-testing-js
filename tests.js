@@ -108,4 +108,64 @@ describe('isEven', function(){
     it('it should return false when given nothing', function(){
         expect(isEven()).toBe(false);
     });
+    it('it should return true when given 0', function(){
+        expect(isEven(0)).toBe(true);
+    });
+});
+
+describe('isVowel', function(){
+    it('it should be a defined function', function(){
+        expect(typeof isVowel).toBe('function');
+    });
+    it('it should return a boolean', function(){
+        expect(typeof isVowel()).toBe('boolean');
+    });
+    it('it should return true when given "a"', function(){
+        expect(isVowel("a")).toBe(true);
+    });
+    it('it should return true when given "A"', function(){
+        expect(isVowel("A")).toBe(true);
+    });
+    it('it should return true when given "e"', function(){
+        expect(isVowel("a")).toBe(true);
+    });
+    it('it should return true when given "E"', function(){
+        expect(isVowel("A")).toBe(true);
+    });
+    it('it should return true when given "i"', function(){
+        expect(isVowel("a")).toBe(true);
+    });
+    it('it should return true when given "I"', function(){
+        expect(isVowel("A")).toBe(true);
+    });
+    it('it should return true when given "o"', function(){
+        expect(isVowel("a")).toBe(true);
+    });
+    it('it should return true when given "O"', function(){
+        expect(isVowel("A")).toBe(true);
+    });
+    it('it should return true when given "u"', function(){
+        expect(isVowel("a")).toBe(true);
+    });
+    it('it should return true when given "U"', function(){
+        expect(isVowel("A")).toBe(true);
+    });
+    it('it should return false when given "y"', function(){
+        expect(isVowel("y")).toBe(false);
+    });
+    it('it should return false when given 4', function(){
+        expect(isVowel(4)).toBe(false);
+    });
+    it('it should return false when given true', function(){
+        expect(isVowel(true)).toBe(false);
+    });
+    it('it should return false when given false', function(){
+        expect(isVowel(false)).toBe(false);
+    });
+    it('it should return false when given "banana"', function(){
+        expect(isVowel("banana")).toBe(false);
+    });
+    it('it should return false when given nothing', function(){
+        expect(isVowel()).toBe(false);
+    });
 });
