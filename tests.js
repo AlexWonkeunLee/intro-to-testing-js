@@ -169,3 +169,42 @@ describe('isVowel', function(){
         expect(isVowel()).toBe(false);
     });
 });
+
+describe('add', function(){
+    it('it should be a defined function', function(){
+        expect(typeof add).toBe('function');
+    });
+    it('it should return a number value', function(){
+        expect(typeof add()).toBe('number');
+    });
+    it('it should return 5 when given 2 and 3', function(){
+        expect(add(2,3)).toBe(5);
+    });
+    it('it should return -12 when given -3 and -9', function(){
+        expect(add(-3, -9)).toBe(-12);
+    });
+    it('it should return 11 when given "5" and 6', function(){
+        expect(add("5", 6)).toBe(11);
+    });
+    it('it should return 6 when given -4 and "10"', function(){
+        expect(add(-4, "10")).toBe(6);
+    });
+    it('it should return NaN when given "banana" and "split"', function(){
+        expect(add("banana", "split")).toEqual(NaN);
+    });
+    it('it should return NaN when given 2 and "apples"', function(){
+        expect(add(2, "banana")).toEqual(NaN);
+    });
+    it('it should return NaN when given nothing', function(){
+        expect(add()).toEqual(NaN);
+    });
+    it('it should return NaN when given true and true', function(){
+        expect(add(true, true)).toEqual(NaN);
+    });
+    it('it should return NaN when given true and false', function(){
+        expect(add(true, false)).toEqual(NaN);
+    });
+    it('it should return NaN when given false and false', function(){
+        expect(add(false, false)).toEqual(NaN);
+    });
+});
