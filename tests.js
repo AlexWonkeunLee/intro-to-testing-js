@@ -189,22 +189,22 @@ describe('add', function(){
     it('it should return 6 when given -4 and "10"', function(){
         expect(add(-4, "10")).toBe(6);
     });
-    it('it should return NaN when given "banana" and "split"', function(){
-        expect(add("banana", "split")).toEqual(NaN);
+    it('it should return NaN when given "banana" and "split"', function() {
+        expect(add("banana", "split")).toBeNaN();
     });
     it('it should return NaN when given 2 and "apples"', function(){
-        expect(add(2, "banana")).toEqual(NaN);
+        expect(add(2, "banana")).toBeNaN();
     });
     it('it should return NaN when given nothing', function(){
-        expect(add()).toEqual(NaN);
+        expect(add()).toBeNaN();
     });
     it('it should return NaN when given true and true', function(){
-        expect(add(true, true)).toEqual(NaN);
+        expect(add(true, true)).toBeNaN();
     });
     it('it should return NaN when given true and false', function(){
-        expect(add(true, false)).toEqual(NaN);
+        expect(add(true, false)).toBeNaN();
     });
     it('it should return NaN when given false and false', function(){
-        expect(add(false, false)).toEqual(NaN);
+        expect(add(false, false)).toBeNaN();
     });
 });
